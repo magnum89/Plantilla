@@ -54,7 +54,7 @@ public class entradaDetailFragment extends Fragment {
 
         // Show the dummy content as text in a TextView.
         if (mItem != null) {
-            ((TextView) rootView.findViewById(R.id.entrada_detail)).setText(mItem.content);
+            ((TextView) rootView.findViewById(R.id.entrada_detail)).setText(mItem.descripcion);//sustituimos el contenido por la descripcion
         }
 
         return rootView;

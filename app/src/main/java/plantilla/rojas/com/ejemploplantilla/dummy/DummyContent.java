@@ -25,9 +25,10 @@ public class DummyContent {
 
     static {
         // Add 3 sample items.
-        addItem(new DummyItem("1", "Item 1"));
-        addItem(new DummyItem("2", "Item 2"));
-        addItem(new DummyItem("3", "Item 3"));
+        addItem(new DummyItem("1", "Ultimos estrenos", "Rapido y furioso 7"));
+        addItem(new DummyItem("2", "Recomendados", "El hobbit"));
+        addItem(new DummyItem("3", "Clasicos", "Harry potter"));
+        addItem(new DummyItem("4", "Mas vistas", "Los pinguinos de madagascar"));
     }
 
     private static void addItem(DummyItem item) {
@@ -41,10 +42,13 @@ public class DummyContent {
     public static class DummyItem {
         public String id;
         public String content;
+        public String descripcion;//agregamos este nuevo atributo
 
-        public DummyItem(String id, String content) {
+        public DummyItem(String id, String content, String descripcion) {//modificar el constructor para asignar la descripcion
+            //apenas se creen los objetos
             this.id = id;
             this.content = content;
+            this.descripcion = descripcion;//agregamos un nuevo campo para agregar una descripcion de las entradas
         }
 
         @Override
